@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --main-bg-color: rgb(0, 0, 0);
+    --text-color: white;
+    --headline-color: rgb(217, 36, 12);
+    --headline-color2: rgb(191, 204, 235);
+    --headline-color-hover: rgb(191, 7, 38);
+  }
+
+body {
+    background-color: var(--main-bg-color);
+}  
+
+h1 {
+    font-family: "Iceberg", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+h1, .title {color: var(--headline-color);
+}  
+
+h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--headline-color2);
+}  
+
+h2 {
+    font-size: 5rem;
+    padding: 1.7rem 0;
+}  
+
+h3 {
+    font-size: 3rem;
+    padding: 1rem 0;
+    text-align: center;
+
+}
+
+h4 {
+    font-size: 2rem;
+    padding: 1.7rem 0;
+
+}
+
+p {
+    font-family: 'Roboto', serif;
+    color: var(--text-color);
+    font-size: 2.5rem;
+
+}
+
+h1:hover, .title:hover {
+    color: var(--headline-color-hover);
+    cursor: pointer;
+}  
+
+#hero {
+    background-image: url(./img/hero2.gif);
+    background-size: contain;
+    height: 40rem;
+    width: auto;
+    background-repeat: no-repeat;
+}
+
+#hero-txt {
+    float: right;
+    font-size: 10rem;
+    margin-right: 3rem;
+}
+
+nav {
+    padding: 1rem 2rem; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    text-decoration: none; 
+    color: var(--text-color);
+    padding: 0.5rem 1rem; 
+    font-size: 1.2rem; 
+    font-weight: bold;
+    text-transform: uppercase; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px; 
+}
+
+nav a:hover {
+    color: var(--headline-color);
+    background-color: rgba(255, 255, 255, 0.1); 
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none; 
+    display: flex; 
+    gap: 2rem; 
+    padding: 0;
+    margin: 0; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 5rem;
+}
+
+article {
+    padding: 2rem 0;
+}
+
+.about div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem auto;
+    border: 0.1rem solid rgb(50, 2, 2);
+    border-radius: 1%;
+    box-shadow: 5px 5px 5px rgb(50, 2, 2);
+}
+
+#gallery img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+#trailer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+iframe {
+    border: 0.1rem solid rgb(50, 2, 2);
+    border-radius: 1%;
+    box-shadow: 5px 5px 5px rgb(50, 2, 2);
+}
+
+.cnc-subcat {
+    text-align: center;
+}
+
+.cnc-subcat {
+    display: grid; 
+    place-items: center; 
+    height: 60vh;
+    margin: 0; 
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.card p {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0.1rem;
+    border-radius: 3%;
+}
+
+.role {
+    font-size: 1rem;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: auto;
+    position: relative; 
+    overflow: hidden;
+    filter: grayscale(100%);
+    border: 0.1rem solid rgb(50, 2, 2);
+    border-radius: 1%;
+    box-shadow: 5px 5px 5px rgb(50, 2, 2);
+}
+
+.card1-cnc {
+    background-image: url(./img/smoke1.jpeg);
+    background-size: cover;
+    background-repeat: no/repeat;
+     
+}
+
+.card2-cnc {
+    background-image: url(./img/smoke2.jpeg);
+    background-size: cover;
+    background-repeat: no/repeat; 
+}
+
+.card3-cnc {
+    background-image: url(./img/smoke3.jpeg);
+    background-size: cover;
+    background-repeat: no/repeat; 
+}
+
+.card4-cnc {
+    background-image: url(./img/smoke4.jpeg);
+    background-size: cover;
+    background-repeat: no/repeat; 
+}
+
+.card img.portrait {
+    width: 10rem; 
+    height: auto; 
+    z-index: 2; 
+    border-radius: 50%;
+    margin: 2rem;
+    filter: blur(2px);
+    
+}
+
+.card img.portrait:hover {
+    filter: blur(0px);
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--main-bg-color); /* Matches the dark background */
+    color: var(--text-color); /* White text */
+    padding: 2rem 0; /* Add padding for spacing */
+    text-align: center; /* Centers the text */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow at the top */
+    position: relative; /* Make sure it's placed correctly */
+    z-index: 1000;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+footer nav a:hover {
+    color: var(--headline-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: normal;
+}
+
+
+@media only screen and (max-width:1800px) {
+        #hero-txt {
+            width: 75%;
+            text-align: right; 
+            margin-right: 1rem; 
+            font-size: 8rem;
+        }
+    }
+
+    @media only screen and (max-width: 1500px) {
+        #hero-txt { 
+            width:fit-content;
+            text-align: right; 
+            font-size: 6rem; 
+        }
+        #hero {
+            height: 30rem;
+            background-size: cover; 
+        }
+    }
+
+    @media only screen and (max-width: 1220px) {
+        #hero-txt {  
+            font-size: 5rem; 
+    }
+    }
+
+    @media only screen and (max-width: 1050px) {
+        #hero-txt {  
+            font-size: 4rem; 
+    }
+    }
+
+    @media (max-width: 768px) {
+        #gallery {
+            grid-template-columns: 1fr;
+        }
+    }
