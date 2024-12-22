@@ -282,13 +282,13 @@ iframe {
 }
 
 #premiere {
-    text-align: center;
     padding: 2rem;
     color: var(--text-color);
 }
 
 #countdown {
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
