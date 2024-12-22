@@ -92,6 +92,7 @@
         <h3>Premiere Night</h3>
         <p>Prepare yourself for an evening where the grotesque meets the profound, and the absurd feels eerily familiar. The premiere of <i class="title">The Heartsnatcher</i> awaits you at the legendary Babylon Movie Theatre, a venue where the walls whisper, and the seats bite back.</p>
         <h4>When?</h4>
+        <div id="countdown"><p id="demo"></p></div>
             <p>February 24th, 2025. Doors open at 6 PM. The emotional unraveling begins at 8 PM.</p>
         <h4>Where?</h4>
             <p>Babylon Movie Theatre, Berlin.  The perfect place to question your reality — and your seating choice.</p>
@@ -138,6 +139,30 @@
         </a>
     </div>
 </footer>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("February 24, 2025 18:00:00").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ 
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 </body>
 </p>
 </html>

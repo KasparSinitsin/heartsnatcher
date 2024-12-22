@@ -287,6 +287,19 @@ iframe {
     color: var(--text-color);
 }
 
+#countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#demo {
+    border: 0.1rem solid rgb(55, 54, 54);
+    border-radius: 1rem;
+    width: 20rem;
+}
+
 #premiere iframe {
     filter: grayscale(100%);
     transition: filter 0.3s ease; 
@@ -367,7 +380,6 @@ footer nav a {
 
 footer nav a:hover {
     color: var(--headline-color);
-    background-color: rgba(255, 255, 255, 0.1);
     cursor: pointer;
 }
 
