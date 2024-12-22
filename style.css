@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+    :root {
     --main-bg-color: rgb(0, 0, 0);
     --text-color: white;
     --headline-color: rgb(217, 36, 12);
@@ -226,26 +229,26 @@ iframe {
 .card1-cnc {
     background-image: url(./img/smoke1.jpeg);
     background-size: cover;
-    background-repeat: no/repeat;
+    background-repeat: no-repeat;
      
 }
 
 .card2-cnc {
     background-image: url(./img/smoke2.jpeg);
     background-size: cover;
-    background-repeat: no/repeat; 
+    background-repeat: no-repeat; 
 }
 
 .card3-cnc {
     background-image: url(./img/smoke3.jpeg);
     background-size: cover;
-    background-repeat: no/repeat; 
+    background-repeat: no-repeat; 
 }
 
 .card4-cnc {
     background-image: url(./img/smoke4.jpeg);
     background-size: cover;
-    background-repeat: no/repeat; 
+    background-repeat: no-repeat; 
 }
 
 .card img.portrait {
