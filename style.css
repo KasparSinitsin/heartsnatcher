@@ -24,31 +24,46 @@ h1, .title {color: var(--headline-color);
 
 h2, h3, h4 {
     font-family: 'Roboto', sans-serif;
-    color: var(--headline-color2);
-}  
+    background: linear-gradient(360deg, #ffffff, #9198a9);
+    background-clip: text; 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
 
 h2 {
     font-size: 5rem;
     padding: 1.7rem 0;
 }  
 
+.title {
+    color: var(--headline-color); 
+    font-size: inherit; 
+    font-family: inherit; 
+    background: none;
+    -webkit-text-fill-color: initial; 
+  }
+
 h3 {
     font-size: 3rem;
     padding: 1rem 0;
     text-align: center;
-
+    text-decoration: underline;
+    text-decoration-color: #ffffff;
+    text-underline-offset: 15px;
 }
 
 h4 {
     font-size: 2rem;
     padding: 1.7rem 0;
-
 }
 
 p {
-    font-family: 'Roboto', serif;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
     color: var(--text-color);
-    font-size: 2.5rem;
+    font-size: 2rem;
 
 }
 
@@ -117,10 +132,10 @@ article {
     padding: 2rem 0;
 }
 
-.about div {
+#about, #about div {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 #gallery {
@@ -156,13 +171,22 @@ iframe {
     box-shadow: 5px 5px 5px rgb(50, 2, 2);
 }
 
-.cnc-subcat {
+#cnc {
+    text-align: center;
+}
+
+#about h2 {
+    text-align: center;
+}
+
+#tickets {
     text-align: center;
 }
 
 .cnc-subcat {
     display: grid; 
     place-items: center; 
+    text-align: center;
     height: 60vh;
     margin: 0; 
 }
@@ -240,13 +264,75 @@ iframe {
     cursor: pointer;
 }
 
+#premiere, #premiere div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#premiere h3 {
+    margin-bottom: 3.5rem;
+}
+
+#premiere h4 {
+    text-align: center;
+}
+
+#premiere {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-color);
+}
+
+#premiere iframe {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease; 
+    margin: 2rem auto;
+    display: block; 
+}
+
+#premiere iframe:hover {
+    filter: grayscale(0);
+}
+
+#choose-tickets {
+    margin: 2rem auto;
+    padding: 2rem;
+    color: var(--text-color);
+    width: 80%;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+}
+
+#ticket-options {
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+
+#buy-button {
+    margin-top: 2rem;
+    background-color: var(--headline-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#buy-button:hover {
+    background-color: rgba(191, 7, 38, 0.9);
+}
+
+
 footer {
-    background-color: var(--main-bg-color); /* Matches the dark background */
-    color: var(--text-color); /* White text */
-    padding: 2rem 0; /* Add padding for spacing */
-    text-align: center; /* Centers the text */
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow at the top */
-    position: relative; /* Make sure it's placed correctly */
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2); 
+    position: relative; 
     z-index: 1000;
 }
 
@@ -288,6 +374,28 @@ footer p {
     font-weight: normal;
 }
 
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ff5c5c;
+    transform: scale(1.1); 
+}
+
+.social-icon i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
 
 @media only screen and (max-width:1800px) {
         #hero-txt {
@@ -311,8 +419,18 @@ footer p {
     }
 
     @media only screen and (max-width: 1220px) {
+        main {
+            margin: 1rem 2rem;
+        }
         #hero-txt {  
             font-size: 5rem; 
+    }
+    #gallery {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
     }
     }
 
@@ -323,7 +441,40 @@ footer p {
     }
 
     @media (max-width: 768px) {
-        #gallery {
-            grid-template-columns: 1fr;
+        .card {
+            width: 100%;
+        }
+        #hero-txt {
+            font-size: 5rem;
+        }
+        nav ul {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        h2 {
+            font-size: 3rem;
+        }
+        h3 {
+            font-size: 2rem;
+        }
+        h4 {
+            font-size: 1.5rem;
+        }
+        nav ul {
+            padding: 0;
+            margin: 0;
+        }
+        .cards {
+            gap: 0.5rem;
+        }
+        .card {
+            width: 100%;
+            font-size: 1.5rem;
+        }
+        #ticket-options {
+            font-size: 1.5rem;
         }
     }
